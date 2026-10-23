@@ -81,7 +81,7 @@ export default function Contact() {
             >
               {["Branding", "Graphic Design", "Website", "App", "Social Media", "IT & ERP"].map(
                 (s) => (
-                  <option key={s} className="bg-ink">
+                  <option key={s} className=" text-ink/60">
                     {s}
                   </option>
                 )

@@ -11,7 +11,7 @@ export default function Stats() {
             <div className="text-gradient text-4xl font-extrabold sm:text-5xl">
               <Counter to={s.value} suffix={s.suffix} />
             </div>
-            <div className="mt-2 text-sm text-white/60">{s.label}</div>
+            <div className="mt-2 text-sm text-ink/60">{s.label}</div>
           </div>
         ))}
       </Reveal>
