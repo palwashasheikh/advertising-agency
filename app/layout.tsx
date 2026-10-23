@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   title: "B-Creative | Advertising & IT Agency in Jeddah",
   description:
     "Branding, social media, graphic design, websites and apps for businesses in Saudi Arabia.",
+  robots: { index: false, follow: false },
 };
 
 export default function RootLayout({
