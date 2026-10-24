@@ -37,7 +37,7 @@ export default function Hero() {
             animate="show"
             className="inline-block rounded-full border border-line bg-ink/5 px-4 py-1.5 text-xs text-ink/70"
           >
-            Advertising + IT Agency · Jeddah, KSA
+          B-CREATIVE NETWORK AGENCY, SAUDI ARABIA
           </motion.span>
 
           <motion.h1
@@ -46,9 +46,9 @@ export default function Hero() {
             initial="hidden"
             animate="show"
             className="mt-6 text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl"
-          >
-            We build brands that{" "}
-            <span className="text-gradient">sell, not just look good</span>
+          >Company
+          {" "}
+            <span className="text-gradient">Introduction</span>
           </motion.h1>
 
           <motion.p

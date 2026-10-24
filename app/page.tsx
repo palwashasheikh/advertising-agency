@@ -3,6 +3,8 @@ import Hero from "@/app/components/Hero";
 import Services from "@/app/components/Services";
 import Stats from "@/app/components/Stats";
 import Work from "@/app/components/Work";
+import About from "@/app/components/About";
+import Team from "@/app/components/Team";
 import WhyUs from "@/app/components/WhyUs";
 import Contact from "@/app/components/Contact";
 import Footer from "@/app/components/Footer";
@@ -17,6 +19,8 @@ export default function Home() {
         <Services />
         <Stats />
         <Work />
+        <About />
+        <Team />
         <WhyUs />
         <Contact />
       </main>
