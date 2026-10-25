@@ -123,18 +123,21 @@ export default function Hero() {
         <About />
 
         {/* 3. Approach + Benefits */}
-        <div className="mt-24 grid gap-5 md:grid-cols-2">
+               {/* 3. Approach + Benefits */}
+        <div className="font-times mt-24 grid gap-5 md:grid-cols-2">
           <div className="rounded-[2rem] border border-line bg-white p-8 shadow-xl shadow-black/5 sm:p-10">
-            <h2 className="text-3xl font-semibold sm:text-4xl">Our Approach</h2>
+            <h2 className="font-times text-3xl font-bold sm:text-4xl">
+              Our Approach
+            </h2>
             <ol className="mt-6 divide-y divide-line">
               {approach.map((a, i) => (
                 <li key={a.title} className="group flex items-start gap-5 py-4">
-                  <span className="font-display w-10 shrink-0 text-3xl leading-none text-ink/20 transition group-hover:text-accent">
+                  <span className="w-10 shrink-0 text-3xl leading-none text-ink/20 transition group-hover:text-accent">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <div>
-                    <h3 className="font-bold">{a.title}</h3>
-                    <p className="mt-1 text-sm leading-relaxed text-ink/65">
+                    <h3 className="text-lg font-bold">{a.title}</h3>
+                    <p className="mt-1 leading-relaxed text-ink/70">
                       {a.text}
                     </p>
                   </div>
@@ -144,16 +147,18 @@ export default function Hero() {
           </div>
 
           <div className="rounded-[2rem] bg-ink p-8 text-white shadow-xl shadow-black/20 sm:p-10">
-            <h2 className="text-3xl font-semibold sm:text-4xl">Benefits</h2>
+            <h2 className="font-times text-3xl font-bold sm:text-4xl">
+              Benefits
+            </h2>
             <ul className="mt-6 divide-y divide-white/10">
               {benefits.map((b) => (
                 <li key={b.title} className="flex items-start gap-4 py-4">
-                  <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand/20 text-brand">
+                  <span className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand/20 text-brand">
                     <Check className="h-4 w-4" />
                   </span>
                   <div>
-                    <h3 className="font-bold">{b.title}</h3>
-                    <p className="mt-1 text-sm leading-relaxed text-white/70">
+                    <h3 className="text-lg font-bold">{b.title}</h3>
+                    <p className="mt-1 leading-relaxed text-white/75">
                       {b.text}
                     </p>
                   </div>
