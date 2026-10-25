@@ -37,15 +37,15 @@ export default function Hero() {
       />
 
       <div className="relative mx-auto max-w-6xl">
-        {/* Top: company intro (left) + logo (right) */}
+        {/* Top: company intro (left) + logo (right), same size on desktop */}
         <div className="grid items-center gap-12 md:grid-cols-2">
-          <div className="text-center md:text-left">
+          <div className="text-center md:text-left lg:flex lg:aspect-square lg:flex-col lg:justify-center">
             <motion.h1
               custom={0}
               variants={fade}
               initial="hidden"
               animate="show"
-              className="text-3xl font-semibold leading-tight sm:text-4xl lg:text-[2.6rem]"
+              className="font-times text-3xl font-bold leading-tight sm:text-4xl lg:text-[2.6rem]"
             >
               {afterName !== null ? (
                 <>
@@ -63,7 +63,7 @@ export default function Hero() {
                 variants={fade}
                 initial="hidden"
                 animate="show"
-                className="mx-auto mt-6 max-w-xl leading-relaxed text-ink/60 sm:text-lg md:mx-0"
+                className="font-times mx-auto mt-6 max-w-xl text-lg leading-relaxed text-ink/70 sm:text-xl md:mx-0"
               >
                 {rest}
               </motion.p>
@@ -99,12 +99,12 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="order-first mx-auto w-full max-w-[220px] md:order-none md:max-w-md"
+            className="order-first mx-auto w-full max-w-[220px] md:order-none md:max-w-none"
           >
             <motion.div
               animate={{ y: [0, -14, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="flex aspect-square items-center justify-center rounded-full border border-line bg-white/70 shadow-2xl shadow-black/5 backdrop-blur"
+              className="flex aspect-square w-full items-center justify-center rounded-full border border-line bg-white/70 shadow-2xl shadow-black/5 backdrop-blur"
             >
               <Image
                 src="/logo-mark.png"
@@ -130,11 +130,16 @@ export default function Hero() {
             <h2 className="text-3xl font-semibold sm:text-4xl">Our Approach</h2>
             <ol className="mt-6 divide-y divide-line">
               {approach.map((a, i) => (
-                <li key={a} className="group flex items-start gap-5 py-4">
+                <li key={a.title} className="group flex items-start gap-5 py-4">
                   <span className="font-display w-10 shrink-0 text-3xl leading-none text-ink/20 transition group-hover:text-accent">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <span className="pt-0.5 leading-relaxed text-ink/75">{a}</span>
+                  <div>
+                    <h3 className="font-bold">{a.title}</h3>
+                    <p className="mt-1 text-sm leading-relaxed text-ink/65">
+                      {a.text}
+                    </p>
+                  </div>
                 </li>
               ))}
             </ol>
@@ -144,11 +149,16 @@ export default function Hero() {
             <h2 className="text-3xl font-semibold sm:text-4xl">Benefits</h2>
             <ul className="mt-6 divide-y divide-white/10">
               {benefits.map((b) => (
-                <li key={b} className="flex items-start gap-4 py-4">
+                <li key={b.title} className="flex items-start gap-4 py-4">
                   <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand/20 text-brand">
                     <Check className="h-4 w-4" />
                   </span>
-                  <span className="leading-relaxed text-white/80">{b}</span>
+                  <div>
+                    <h3 className="font-bold">{b.title}</h3>
+                    <p className="mt-1 text-sm leading-relaxed text-white/70">
+                      {b.text}
+                    </p>
+                  </div>
                 </li>
               ))}
             </ul>

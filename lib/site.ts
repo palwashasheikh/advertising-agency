@@ -35,7 +35,7 @@ export const services = [
     icon: "Smartphone",
   },
   {
-    title: "Social Media Managing",
+    title: "Digital Marketing",
     text: "Develop and implement a social media strategy that boosts your online presence and drives traffic.",
     icon: "Share2",
   },
@@ -77,27 +77,88 @@ export const ceo = {
 };
 
 // Names and roles only. No personal phone or email on a public site.
-export const team: { name: string; role: string; photo?: string }[] = [
-  { name: "Muhammad Bilal Mustafa", role: "Application Developer", photo: "/team/bilal.jpeg" },
-  { name: "Palwasha Khan", role: "Website Developer", photo: "/team/palwasha.jpg" },
-  { name: "Zubaria Khalid", role: "Graphic Designer", photo: "/team/zubaria.jpeg" },
-  { name: "Akasha Rahman", role: "Social Media Manager", photo: "/team/akasha.jpeg" },
+export const team: {
+  name: string;
+  role: string;
+  photo?: string;
+  email?: string;
+  phone?: string;
+}[] = [
+  {
+    name: "Muhammad Bilal Mustafa",
+    role: "Application Developer",
+    photo: "/team/bilal.jpeg",
+    email: "itx.bmustafa@gmail.com",
+    phone: "+966 59 262 0965",
+  },
+  {
+    name: "Palwasha Khan",
+    role: "Website Developer",
+    photo: "/team/palwasha.jpg",
+    email: "palwashasheikh229@gmail.com",
+    phone: "+971 50 239 3723",
+  },
+  {
+    name: "Zubaria Khalid",
+    role: "Graphic Designer",
+    photo: "/team/zubaria.jpeg",
+    email: "zubariadesign@gmail.com",
+    phone: "+92 326 5590894",
+  },
+  {
+    name: "Akasha Rahman",
+    role: "Social Media Manager",
+    photo: "/team/akasha.jpeg",
+    email: "akasharehman@mail.com",
+    phone: "+971 50 236 4392",
+  },
 ];
 
 export const approach = [
-  "Understand your business goals and requirements",
-  "Develop tailored solutions that meet your needs",
-  "Collaborate and deliver high-quality services",
-  "Provide ongoing support and maintenance",
+  {
+    title: "Understand",
+    text: "We deeply understand your business, vision, and target audience.",
+  },
+  {
+    title: "Strategize",
+    text: "We create a clear, result-driven plan tailored to your goals.",
+  },
+  {
+    title: "Create",
+    text: "Our creative team executes the plan with innovation and precision.",
+  },
+  {
+    title: "Refine",
+    text: "We review, get your feedback, and perfect it to meet quality standards.",
+  },
+  {
+    title: "Deliver & Support",
+    text: "We deliver on time and provide continuous support for growth.",
+  },
 ];
 
 export const benefits = [
-  "Enhanced brand identity and online presence",
-  "Increased customer engagement and conversion rates",
-  "Improved digital marketing and outreach",
-  "Competitive edge in the market",
+  {
+    title: "Dual Presence Advantage",
+    text: "Strong understanding of both Saudi & Pakistani markets.",
+  },
+  {
+    title: "Quality With Affordability",
+    text: "Premium work at the most competitive prices.",
+  },
+  {
+    title: "On-Time & Transparent",
+    text: "Clear communication and timely delivery, always.",
+  },
+  {
+    title: "Growth Focused",
+    text: "We focus on your business growth, not just completing a task.",
+  },
+  {
+    title: "Long-Term Partnership",
+    text: "We become your trusted creative partner for future success.",
+  },
 ];
-
 export const achievements = [
   {
     year: "2026",
