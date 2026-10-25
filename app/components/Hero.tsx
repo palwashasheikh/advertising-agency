@@ -46,7 +46,7 @@ export default function Hero() {
               variants={fade}
               initial="hidden"
               animate="show"
-              className="font-times text-3xl font-bold leading-tight sm:text-4xl lg:text-[2.6rem]"
+              className="font-times text-balance text-3xl font-bold leading-tight sm:text-4xl lg:text-[2.6rem]"
             >
               {afterName !== null ? (
                 <>
@@ -64,7 +64,7 @@ export default function Hero() {
                 variants={fade}
                 initial="hidden"
                 animate="show"
-                className="font-times mx-auto mt-6 max-w-xl text-lg leading-relaxed text-ink/70 sm:text-xl md:mx-0"
+                className="font-times mt-6 hyphens-auto text-justify text-lg leading-relaxed text-ink/70 sm:text-xl"
               >
                 {rest}
               </motion.p>

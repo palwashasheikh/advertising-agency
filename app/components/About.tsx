@@ -18,7 +18,7 @@ export default function About() {
     <div id="about" className="font-times mt-24 scroll-mt-24">
       <SectionHead
         eyebrow="About Us"
-        title="Creativity and technology, together"
+        title=""
         titleClass="font-times"
       />
 
@@ -52,7 +52,7 @@ export default function About() {
 
             <div className="md:border-l md:border-line md:pl-12 lg:pl-16">
               <span className="block h-1 w-12 rounded-full bg-brand" />
-              <p className="mt-6 text-xl leading-relaxed text-ink/85 sm:text-2xl sm:leading-relaxed">
+              <p className="mt-6 hyphens-auto text-justify text-lg leading-relaxed text-ink/85 sm:text-xl lg:text-2xl lg:leading-relaxed">
                 {ceo.text}
               </p>
             </div>

@@ -52,13 +52,48 @@ export const stats = [
 
 
 // TODO: replace with real projects the client has permission to show.
-export const work = [
-  { title: "Project One", category: "Branding", from: "#7c3aed", to: "#22d3ee" },
-  { title: "Project Two", category: "Website", from: "#ec4899", to: "#7c3aed" },
-  { title: "Project Three", category: "Social Media", from: "#22d3ee", to: "#10b981" },
-  { title: "Project Four", category: "Graphic Design", from: "#f59e0b", to: "#ec4899" },
-  { title: "Project Five", category: "App", from: "#6366f1", to: "#22d3ee" },
-  { title: "Project Six", category: "Branding", from: "#10b981", to: "#7c3aed" },
+export const work: {
+  title: string;
+  category: string;
+  href: string;
+  image?: string;
+}[] = [
+  {
+    title: "Deal Real Estate – Obhur Living 2",
+    category: "Real Estate",
+    href: "https://www.behance.net/gallery/255465531/DEAL-REAL-ESTATE-PROJECT-(OBHUR-LIVING-2-)",
+    // image: "/work/deal.jpg",
+  },
+  {
+    title: "Saif Group of Companies – Saif Sky Rise",
+    category: "Real Estate",
+    href: "https://www.behance.net/gallery/255295525/Saif-Group-Of-Companies-(-Saif-Sky-Rise)",
+    // image: "/work/saif.jpg",
+  },
+  {
+    title: "Delicious Kitchen",
+    category: "Food",
+    href: "https://www.behance.net/gallery/248453637/Delicious-Kitchen",
+    // image: "/work/kitchen.jpg",
+  },
+  {
+    title: "Aurora Ring Designs",
+    category: "Jewelry",
+    href: "https://www.behance.net/gallery/246759881/Aurora-Ring-Designs",
+    // image: "/work/aurora.jpg",
+  },
+  {
+    title: "Loream Paris Hair Serum",
+    category: "Beauty",
+    href: "https://www.behance.net/gallery/246626647/Loream-Paris-Hair-Serum",
+    // image: "/work/serum.jpg",
+  },
+  {
+    title: "Dental Care",
+    category: "Healthcare",
+    href: "https://www.behance.net/gallery/246626481/Dental-Care",
+    // image: "/work/dental.jpg",
+  },
 ];
 
 
