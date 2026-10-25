@@ -4,11 +4,6 @@ import { about, ceo } from "@/lib/site";
 import Reveal from "./Reveal";
 import SectionHead from "./SectionHead";
 
-// First sentence = big heading, the rest = normal text (same words, nothing added)
-const cut = about.text.indexOf(". ");
-const lead = cut === -1 ? about.text : about.text.slice(0, cut + 1);
-const rest = cut === -1 ? "" : about.text.slice(cut + 2);
-
 export default function About() {
   return (
     <section id="about" className="mx-auto max-w-6xl px-5 py-24">
@@ -18,67 +13,54 @@ export default function About() {
       />
 
       <Reveal>
-        <div className="grid overflow-hidden rounded-[2rem] border border-line shadow-2xl shadow-black/5 md:grid-cols-5">
-          {/* Company side */}
-          <div className="flex flex-col justify-between bg-card p-8 sm:p-12 md:col-span-3">
-            <div>
-              <span className="block h-1 w-12 rounded-full bg-brand" />
-              <h3 className="font-display mt-8 text-2xl font-semibold leading-snug sm:text-3xl">
-                {lead}
-              </h3>
-              {rest && (
-                <p className="mt-6 leading-relaxed text-ink/65">{rest}</p>
-              )}
-            </div>
+        <div className="relative overflow-hidden rounded-[2rem] border border-line bg-card shadow-2xl shadow-black/5">
+          <div className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-brand/15 blur-[90px]" />
 
-            <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-line pt-6">
-              {about.locations.map((l) => (
-                <span
-                  key={l}
-                  className="inline-flex items-center gap-2 text-sm font-semibold"
-                >
-                  <MapPin className="h-4 w-4 text-accent" />
-                  {l}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          {/* CEO side */}
-          <div className="relative overflow-hidden bg-ink p-8 text-white sm:p-12 md:col-span-2">
-            <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-brand/25 blur-[90px]" />
-
-            <div className="relative flex items-center gap-5">
-              <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-full ring-2 ring-brand ring-offset-4 ring-offset-ink">
+          {/* CEO */}
+          <div className="relative grid items-center gap-10 p-8 sm:p-12 md:grid-cols-[260px_1fr] lg:gap-16">
+            <div className="flex flex-col items-center text-center">
+              <div className="relative h-36 w-36 overflow-hidden rounded-full ring-2 ring-brand ring-offset-4 ring-offset-card">
                 {ceo.photo ? (
                   <Image
                     src={ceo.photo}
                     alt={ceo.name}
                     fill
-                    sizes="96px"
+                    sizes="144px"
                     className="object-cover object-top"
                   />
                 ) : (
-                  <div className="font-display flex h-full w-full items-center justify-center bg-white text-2xl font-semibold text-ink">
+                  <div className="font-display flex h-full w-full items-center justify-center bg-ink text-4xl font-semibold text-white">
                     MB
                   </div>
                 )}
               </div>
-              <div>
-                <h3 className="font-display text-2xl font-semibold leading-tight">
-                  {ceo.name}
-                </h3>
-                <p className="mt-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-brand">
-                  {ceo.role}
-                </p>
-              </div>
+              <h3 className="font-display mt-6 text-2xl font-semibold">
+                {ceo.name}
+              </h3>
+              <p className="mt-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+                {ceo.role}
+              </p>
             </div>
 
-            <span className="relative my-8 block h-px w-full bg-white/15" />
+            <div className="md:border-l md:border-line md:pl-12 lg:pl-16">
+              <span className="block h-1 w-12 rounded-full bg-brand" />
+              <p className="font-display mt-6 text-xl leading-relaxed text-ink/85 sm:text-2xl sm:leading-relaxed">
+                {ceo.text}
+              </p>
+            </div>
+          </div>
 
-            <p className="relative text-sm leading-loose text-white/70">
-              {ceo.text}
-            </p>
+          {/* Countries */}
+          <div className="relative grid divide-y divide-white/10 bg-ink text-white sm:grid-cols-2 sm:divide-x sm:divide-y-0">
+            {about.locations.map((l) => (
+              <div
+                key={l}
+                className="flex items-center justify-center gap-3 px-6 py-6"
+              >
+                <MapPin className="h-5 w-5 text-brand" />
+                <span className="font-display text-xl font-semibold">{l}</span>
+              </div>
+            ))}
           </div>
         </div>
       </Reveal>

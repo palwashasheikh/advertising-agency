@@ -15,42 +15,29 @@ export const navLinks = [
   { label: "Contact", href: "#contact" },
 ];
 
+export const servicesIntro =
+  "We offer IT services to enhance your digital presence and drive business growth.";
+
 export const services = [
   {
-    title: "Branding",
-    text: "A clear identity that makes your business look like the market leader.",
-    icon: "Sparkles",
-    points: ["Brand strategy", "Logo and visual identity", "Brand guidelines"],
-  },
-  {
-    title: "Graphic Design",
-    text: "Designs that sell, ready for print and for screens.",
+    title: "Graphic Designing",
+    text: "Create engaging visuals, logos, and branding materials that capture your brand’s essence.",
     icon: "PenTool",
-    points: ["Social media graphics", "Brochures and flyers", "Banners and posters"],
   },
   {
-    title: "Websites",
-    text: "Fast, mobile-friendly sites built to bring you leads.",
+    title: "Website Development",
+    text: "Design and develop a responsive, user-friendly website that showcases your services and products.",
     icon: "Globe",
-    points: ["Business and landing pages", "Portfolio and blog sites", "Basic SEO included"],
   },
   {
-    title: "Apps",
-    text: "Custom tools that match how your business actually works.",
+    title: "Application Development",
+    text: "Build custom mobile and web applications that meet your business needs and enhance customer engagement.",
     icon: "Smartphone",
-    points: ["Mobile apps", "Web applications", "Customer-facing tools"],
   },
   {
-    title: "Social Media",
-    text: "Steady content and ads that grow your audience.",
+    title: "Social Media Managing",
+    text: "Develop and implement a social media strategy that boosts your online presence and drives traffic.",
     icon: "Share2",
-    points: ["Content and scheduling", "Ad campaign management", "Monthly reports"],
-  },
-  {
-    title: "IT & ERP Support",
-    text: "Reliable systems and a team you can call when something breaks.",
-    icon: "Server",
-    points: ["ERP support", "Digital systems", "Ongoing maintenance"],
   },
 ];
 
@@ -58,7 +45,7 @@ export const services = [
 export const stats = [
   { value: 50, suffix: "+", label: "Projects delivered" },
   { value: 30, suffix: "+", label: "Happy clients" },
-  { value: 3, suffix: " yrs", label: "In Jeddah" },
+  { value: 6, suffix: " yrs", label: "Years Saudi Arabia" },
   { value: 3, suffix: " days", label: "Typical design delivery" },
 ];
 
@@ -78,7 +65,7 @@ export const work = [
 
 
 export const about = {
-  text: "B-Creative is a full-service advertising agency in Saudi Arabia and Pakistan, offering creative and IT solutions. We combine branding, social media marketing, graphic design, website development, ERP support and digital systems to help businesses grow online and offline.",
+  text: "B-CREATIVE NETWORK AGENCY is a dynamic creative agency proudly based in Saudi Arabia and Pakistan. We are committed to combining innovation, strategy, and technology to help businesses build a powerful online presence. Trusted by clients across both regions, we focus on creativity, quality, and long-term growth.",
   locations: ["Saudi Arabia", "Pakistan"],
 };
 
