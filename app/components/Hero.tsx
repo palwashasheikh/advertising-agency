@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, Check, MessageCircle } from "lucide-react";
 import { about, approach, benefits, site } from "@/lib/site";
+import About from "./About";
 
 const fade = {
   hidden: { opacity: 0, y: 24 },
@@ -37,7 +38,7 @@ export default function Hero() {
       />
 
       <div className="relative mx-auto max-w-6xl">
-        {/* Top: company intro (left) + logo (right), same size on desktop */}
+        {/* 1. Company intro (left) + logo (right) */}
         <div className="grid items-center gap-12 md:grid-cols-2">
           <div className="text-center md:text-left lg:flex lg:aspect-square lg:flex-col lg:justify-center">
             <motion.h1
@@ -118,14 +119,11 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Bottom: approach + benefits */}
-        <motion.div
-          custom={3}
-          variants={fade}
-          initial="hidden"
-          animate="show"
-          className="mt-20 grid gap-5 md:grid-cols-2"
-        >
+        {/* 2. About (CEO + countries) */}
+        <About />
+
+        {/* 3. Approach + Benefits */}
+        <div className="mt-24 grid gap-5 md:grid-cols-2">
           <div className="rounded-[2rem] border border-line bg-white p-8 shadow-xl shadow-black/5 sm:p-10">
             <h2 className="text-3xl font-semibold sm:text-4xl">Our Approach</h2>
             <ol className="mt-6 divide-y divide-line">
@@ -163,7 +161,7 @@ export default function Hero() {
               ))}
             </ul>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
