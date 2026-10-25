@@ -45,8 +45,8 @@ export const services = [
 export const stats = [
   { value: 50, suffix: "+", label: "Projects delivered" },
   { value: 30, suffix: "+", label: "Happy clients" },
-  { value: 6, suffix: " yrs", label: "Years Saudi Arabia" },
-  { value: 3, suffix: " days", label: "Typical design delivery" },
+  { value: 6, suffix: " yrs", label: "Years Saudi Arabia & Pakistan" },
+  // { value: 3, suffix: " days", label: "Typical design delivery" },
 ];
 
 

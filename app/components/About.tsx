@@ -6,10 +6,11 @@ import SectionHead from "./SectionHead";
 
 export default function About() {
   return (
-    <section id="about" className="mx-auto max-w-6xl px-5 py-24">
+    <section id="about" className="font-times mx-auto max-w-6xl px-5 py-24">
       <SectionHead
         eyebrow="About Us"
         title="Creativity and technology, together"
+        titleClass="font-times"
       />
 
       <Reveal>
@@ -29,14 +30,12 @@ export default function About() {
                     className="object-cover object-top"
                   />
                 ) : (
-                  <div className="font-display flex h-full w-full items-center justify-center bg-ink text-4xl font-semibold text-white">
+                  <div className="flex h-full w-full items-center justify-center bg-ink text-4xl font-semibold text-white">
                     MB
                   </div>
                 )}
               </div>
-              <h3 className="font-display mt-6 text-2xl font-semibold">
-                {ceo.name}
-              </h3>
+              <h3 className="mt-6 text-2xl font-bold">{ceo.name}</h3>
               <p className="mt-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
                 {ceo.role}
               </p>
@@ -44,7 +43,7 @@ export default function About() {
 
             <div className="md:border-l md:border-line md:pl-12 lg:pl-16">
               <span className="block h-1 w-12 rounded-full bg-brand" />
-              <p className="font-display mt-6 text-xl leading-relaxed text-ink/85 sm:text-2xl sm:leading-relaxed">
+              <p className="mt-6 text-xl leading-relaxed text-ink/85 sm:text-2xl sm:leading-relaxed">
                 {ceo.text}
               </p>
             </div>
@@ -58,7 +57,7 @@ export default function About() {
                 className="flex items-center justify-center gap-3 px-6 py-6"
               >
                 <MapPin className="h-5 w-5 text-brand" />
-                <span className="font-display text-xl font-semibold">{l}</span>
+                <span className="text-xl font-bold">{l}</span>
               </div>
             ))}
           </div>
